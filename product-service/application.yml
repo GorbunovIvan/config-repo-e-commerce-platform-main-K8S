@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/e-commerce-platform-product-service
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/e-commerce-platform

@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+  instance:
+#    hostname: ${spring.application.name}
+    instance-id: ${spring.application.name}:${random.uuid}
